@@ -199,7 +199,7 @@ const deleteaUser = asyncHandler(async (req, res) => {
     const { id } = req.params;
     validateMongodbId(id);
     try {
-        const deleteaUser = await User.findByIdAndDeletek(id);
+        const deleteaUser = await User.findByIdAndDelete(id);
         res.json({ deleteaUser });
     }
     catch (error) {
