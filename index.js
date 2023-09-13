@@ -1,8 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const dbConnect = require('./config/dbConnect');
-require('dotenv').config();
-const PORT = process.env.PORT || 4000;
 const authRouter = require("./routes/authRoute");
 const productRouter = require("./routes/productRoute");
 const blogRouter = require("./routes/blogRoute");
@@ -39,6 +37,6 @@ app.use("/api/upload", uploadRouter);
 app.use(notFound);
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-    console.log(`Server is running at PORT ${PORT}`);
+app.listen(5000, () => {
+    console.log(`Server is running at PORT 5000`);
 })
